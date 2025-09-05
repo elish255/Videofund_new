@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:image" content="https://videofunds.top/images/2.png">
+    <meta property="og:title" content="Get paid to enjoy videos 🎥">
+    <meta property="og:description" content="Earn $0.60 for every minute you spend watching!">
+    <meta property="og:url" content="https://youtube.com">
+    <meta property="og:type" content="video">
+    <meta name="author" content="">
+    <title>Choose a system for withdrawing money</title>
+    
+    <style>
+        :root {
+            --primary-color: #68162e;
+            --secondary-color: #c92121;
+            --accent-color: blue;
+            --success-color: #149210;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Background image with overlay */
+        body {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(104, 22, 46, 0.85) 0%, rgba(201, 33, 33, 0.8) 100%);
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 0.8rem 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .navbar-brand span {
+            color: var(--accent-color);
+            margin-left: 8px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+        
+        .header-icon {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin: 2rem 0;
+            color:#18610A;
+            font-weight: bold;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .payout-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .payout-option {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 1.5rem;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        
+        .payout-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .payout-image {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+        
+        .payout-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .payout-description {
+            color: #555;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .select-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .select-button:hover {
+            background-color: #0c4e08;
+            color: rgb(245, 242, 242);
+            text-decoration: none;
+        }
+        
+      
+        footer {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .email-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: darkred;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+        }
+        
+        .email-button:hover {
+            background-color: #a10000;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .email-button img {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+        
+        .whatsapp-button {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            padding: 12px;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+        }
+        
+        .whatsapp-button img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        .toast-container {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1050;
+        }
+        
+        .toast {
+            background-color: ;
+            border-left: 5px solid var(--success-color);
+            border-radius: 5px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            max-width: 400px;
+            animation: slideIn 0.5s forwards;
+        }
+        
+        .toast-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            color: var(--success-color);
+        }
+        
+        .toast-content {
+            flex: 1;
+        }
+        
+        .toast-title {
+            font-weight: bold;
+            color: var(--success-color);
+            margin-bottom: 0.25rem;
+        }
+        
+        .toast-message {
+            color: #333;
+            font-size: 0.9rem;
+        }
+        
+        .toast-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translate(-50%, 100px);
+                opacity: 0;
+            }
+            to {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .payout-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .payout-option {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .page-header {
+                font-size: 1.5rem;
+            }
+            
+            .social-icons {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+     
+    <nav class="navbar">
+        <a class="navbar-brand" href="./">
+            <img src="icons/video.png" alt="Video" class="icon">
+            <span>Videofunds</span>
+        </a>
+        
+    </nav>
+
+    <!-- Page Header -->
+    <h1 class="page-header">Choose a system for withdrawing money</h1>
+
+    <!-- Payout Options -->
+    <div class="payout-container">
+        <div class="payout-option">
+            <img src="images/card.png" alt="Bank Card" class="payout-image">
+            <div class="payout-title">To a bank card</div>
+            
+            <a class='select-button' href='/pay.html'>Select</a>
+        </div>
+        
+        <div class="payout-option">
+            <img src="images/phone.png" alt="Phone Bill" class="payout-image">
+            <div class="payout-title">To phone bill</div>
+           
+            <a class='select-button' href='/paynext.html'>Select</a>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; videofunds.homes 2007-2025</p>
+    </footer>
+
+
+
+    <!-- Email Button -->
+      <a href="mailto:officialvideofunds@gmail.com?subject=Support%20Request" class="email-button" aria-label="Email us for support">
+        <img src="icons/gmail.png" alt="Email" class="icon-sm"> Email Us
+    </a>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // Function to show toast notification
+        function showToast(name, amount, method) {
+            const toastContainer = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <div class="toast-icon">
+                    <img src="icons/media.png" alt="Success" width="24" height="24">
+                </div>
+                <div class="toast-content">
+                    <div class="toast-title">New Payment Sent:</div>
+                    <div class="toast-message">${name} was just paid $${amount} via ${method}!</div>
+                </div>
+                <button class="toast-close">&times;</button>
+            `;
+            
+            toastContainer.appendChild(toast);
+            
+            // Add event listener to close button
+            toast.querySelector('.toast-close').addEventListener('click', function() {
+                toast.style.animation = 'slideOut 0.5s forwards';
+                setTimeout(() => {
+                    toastContainer.removeChild(toast);
+                }, 500);
+            });
+            
+            // Auto remove after 3 seconds
+            setTimeout(() => {
+                if (toast.parentNode === toastContainer) {
+                    toast.style.animation = 'slideOut 0.5s forwards';
+                    setTimeout(() => {
+                        toastContainer.removeChild(toast);
+                    }, 500);
+                }
+            }, 3000);
+        }
+        
+        // Function to generate random payment notifications
+        function generateRandomPayment() {
+            const names = ['John Smith', 'Emma Johnson', 'Michael Williams', 'Sarah Brown', 'David Jones', 'Jessica Garcia', 'James Miller', 'Jennifer Davis'];
+            const methods = ['Visa', 'MasterCard', 'PayPal', 'Bank Transfer', 'Google Pay'];
+            
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            const randomAmount = Math.floor(Math.random() * 2000 + 500); // $500 to $2500
+            const randomMethod = methods[Math.floor(Math.random() * methods.length)];
+            
+            showToast(randomName, randomAmount.toLocaleString(), randomMethod);
+        }
+        
+        // Start generating random payments
+        setTimeout(() => {
+            generateRandomPayment();
+            setInterval(generateRandomPayment, Math.floor(Math.random() * 20000 + 30000)); // 30-50 seconds
+        }, Math.floor(Math.random() * 10000 + 5000)); // 5-15 seconds
+        
+        // Social sharing functions (placeholder implementations)
+        function share_wa() {
+            const text = "Sign up to get a 10 US Dollar newcomer bonus! I made more than 200 US Dollars by watching the video here, so you can try it.";
+            window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function share_ms() {
+            alert("Messenger sharing would be implemented here");
+        }
+        
+        function share_tg() {
+            alert("Telegram sharing would be implemented here");
+        }
+        
+        function share_twitter() {
+            const text = "Sign up to get a 10 US Dollar newcomer bonus! I made more than 200 US Dollars by watching the video here, so you can try it.";
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`, '_blank');
+        }
+        
+        function share_line() {
+            alert("Line sharing would be implemented here");
+        }
+        
+        // Add CSS for slideOut animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideOut {
+                from {
+                    transform: translate(-50%, 0);
+                    opacity: 1;
+                }
+                to {
+                    transform: translate(-50%, 100px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
