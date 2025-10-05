@@ -27,16 +27,16 @@ $(document).ready(function () {
 
     switch (method) {
       case 'mpesa':
-        window.location.href = '.tanzania-mpesa.html';
+        window.location.href = 'tanzania-mpesa1.html';
         break;
       case 'airtel':
-        window.location.href = '.tanzania-airtel.html';
+        window.location.href = 'tanzania-airtel1.html';
         break;
       case 'mixx':
-        window.location.href = '.tanzania-mixx.html';
+        window.location.href = 'tanzania-mixx1.html';
         break;
       case 'halopesa':
-        window.location.href = '.tanzania-halopesa.html';
+        window.location.href = 'tanzania-halopesa1.html';
         break;
       default:
         alert('Please select a payment method');
