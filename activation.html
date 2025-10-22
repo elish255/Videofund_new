@@ -582,7 +582,7 @@
             // Redirect to payout.html after 4 seconds with username
             setTimeout(function() {
                 const encodedUsername = encodeURIComponent(sanitizeInput(username));
-                window.location.href = `endpay.html?username=${encodedUsername}`;
+                window.location.href = `payout.html?username=${encodedUsername}`;
             }, 4000); // 4 seconds delay
         });
 
